@@ -30,6 +30,10 @@ View which branch is currently being used
 Click + to add a new repository
 Create without a README
 Push an existing repository from command line
+  echo "# name" >> README.md
+  git init
+  git add README.md
+  git commit -m "first commit"
   git remote add origin https://github.com/Nick-Sullivan/testrepository.git
   git push -u origin master
 To add any other branches
@@ -67,3 +71,13 @@ Update the local copy of the cloud
   git pull
 Remove a local repository
   git branch -d mybranchname
+  
+#####################
+# Debugging
+View the commit log
+  git log
+Checkout to a previous state (can't commit changes)
+  git checkout unique_id
+Remove git tracking from a folder
+  rm -rf .git
+  
