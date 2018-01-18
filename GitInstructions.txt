@@ -26,7 +26,7 @@ View which branch is currently being used
   git branch
 
 #####################
-# Creating a repository on GitHub.com
+# Creating a GitHub repo from a local repository
 Click + to add a new repository
 Create without a README
 Push an existing repository from command line
@@ -38,9 +38,20 @@ Push an existing repository from command line
   git push -u origin master
 To add any other branches
   git push origin mytestbranch
-  
 # Create pull request, merge, then delete branch
 Do it on GitHub.com
+
+#####################
+# Creating a local repository from a GitHub repo
+Set folder as a repository
+  git init
+Set it to the online repo
+  git remote add origin https://github.com/Nick-Sullivan/testrepository.git
+Fetch repo info
+  git fetch
+Get files from the cloud
+  git pull
+
 
 #####################
 # Everyday operations
