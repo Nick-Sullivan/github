@@ -9,13 +9,19 @@ You can view the details.
   git config --list
 Set the password cache.
   git config --global crediential.helper "cache --timeout=3600"
+Install Large File Storage
+  git lfs install
+
 
 #####################
 # Creating a repository locally
 Set folder as a repository
   git init
-Add files to be tracked
-  git add -A
+Set bag files to be used in large file storage
+  git lfs track "*.bag"
+  git add .gitattributes
+Add files to be tracked (staging)
+  git add (-A for all, -u for detected changes)
 View files being tracked
   git status
 Commit changes
