@@ -59,9 +59,9 @@ Update the local copy of the cloud (does not change our files)
   git fetch
 Display list of branches
   git branch
-Change into desired branch
+Change into desired branch (changes local files to the local branch)
   git checkout mybranchname
-Download branch contents from the cloud (changes our files)
+Download branch contents from the cloud (changes local files to cloud branch)
   git pull
 Make changes to files
 Check all files are tracked
