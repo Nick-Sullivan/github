@@ -1,3 +1,4 @@
+#####################
 # Initial setup
 Git needs to be installed.
   sudo apt-get install git
@@ -9,6 +10,7 @@ You can view the details.
 Set the password cache.
   git config --global crediential.helper "cache --timeout=3600"
 
+#####################
 # Creating a repository locally
 Set folder as a repository
   git init
@@ -23,6 +25,7 @@ Make a branch
 View which branch is currently being used
   git branch
 
+#####################
 # Creating a repository on GitHub.com
 Click + to add a new repository
 Create without a README
@@ -35,9 +38,7 @@ To add any other branches
 # Create pull request, merge, then delete branch
 Do it on GitHub.com
 
-
-
-###############
+#####################
 # Everyday operations
 Update the local copy of the cloud (does not change our files)
   git fetch

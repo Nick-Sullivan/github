@@ -6,7 +6,9 @@ Then we set details of the GitHub user.
   git config --global user.email nick.dave.sullivan@gmail.com
 You can view the details.
   git config --list
-  
+Set the password cache.
+  git config --global crediential.helper "cache --timeout=3600"
+
 # Creating a repository locally
 Set folder as a repository
   git init
@@ -35,7 +37,7 @@ Do it on GitHub.com
 
 
 
-
+###############
 # Everyday operations
 Update the local copy of the cloud (does not change our files)
   git fetch
