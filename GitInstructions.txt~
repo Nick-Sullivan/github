@@ -1,0 +1,9 @@
+Git needs to be installed.
+  sudo apt-get install git
+Then we set details of the GitHub user.
+  git config --global user.name "Nick Sullivan"
+  git config --global user.email nick.dave.sullivan@gmail.com
+You can view the details.
+  git config --list
+  
+  
