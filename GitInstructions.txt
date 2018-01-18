@@ -58,5 +58,9 @@ Push changes to cloud
   git push origin mybranchname
 Possibly pull request, merge, delete repositories
   (do it online in GitHub.com)
+Update the local copy of the cloud 
+  git fetch
+  git checkout master
+  git pull
 Remove a local repository
   git branch -d mybranchname
