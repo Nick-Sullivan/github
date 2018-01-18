@@ -55,6 +55,8 @@ Set it to the online repo
   git remote add origin https://github.com/Nick-Sullivan/testrepository.git
 Fetch repo info
   git fetch
+Choose branch
+  git checkout master
 Get files from the cloud
   git pull
 
