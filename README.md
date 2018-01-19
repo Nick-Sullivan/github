@@ -121,4 +121,4 @@ Make a change to multiple branches
 - git checkout master2
 - git cherry-pick hash
 - git push origin master2
-- git checkout -d newbranch
+- git branch -D newbranch
