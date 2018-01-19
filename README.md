@@ -108,3 +108,17 @@ Checkout to a previous state (can't commit changes)
 
 Remove git tracking from a folder
 - rm -rf .git
+
+Make a change to multiple branches
+- git checkout -b newbranch master1
+- (make changes)
+- git add -u
+- git commit -m "made changes"
+- git log -p -1 (Copy the commit hash)
+- git checkout master1
+- git cherry-pick hash
+- git push origin master1
+- git checkout master2
+- git cherry-pick hash
+- git push origin master2
+- git checkout -d newbranch
