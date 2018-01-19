@@ -45,7 +45,7 @@ Set folder as a repository
 Set it to the online repo
 - git remote add origin https://github.com/Nick-Sullivan/testrepository.git
 
-Fetch repo info
+Fetch latest commits
 - git fetch
 
 Choose branch
@@ -55,7 +55,7 @@ Get files from the cloud
 - git pull
 
 # Everyday operations
-Update the local copy of the cloud (does not change our files)
+Update the latest commits (does not change our files)
 - git fetch
 
 Display list of branches
