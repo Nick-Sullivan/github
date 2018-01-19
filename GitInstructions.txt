@@ -1,4 +1,9 @@
 #####################
+# Cheat sheet not listed elsewhere
+git checkout -b branchname    Creates a new branch
+git diff branch1..branch2     Displays differences between branches
+
+#####################
 # Initial setup
 Git needs to be installed.
   sudo apt-get install git
@@ -9,43 +14,28 @@ You can view the details.
   git config --list
 Set the password cache.
   git config --global crediential.helper "cache --timeout=3600"
-Install Large File Storage (https://github.com/git-lfs/git-lfs/wiki/Installation)
-  git lfs install
-
 
 #####################
 # Creating a repository locally
 Set folder as a repository
   git init
-Set bag files to be used in large file storage
-  git lfs track "*.bag"
-  git add .gitattributes
-Add files to be tracked (staging)
-  git add (-A for all, -u for detected changes)
 View files being tracked
   git status
+Add files to be tracked (staging)
+  git add (-A for all, -u for detected changes)
 Commit changes
   git commit -m "Message"
-Make a branch
-  git checkout -b mytestbranch
-View which branch is currently being used
-  git branch
-
+  
 #####################
 # Creating a GitHub repo from a local repository
 Click + to add a new repository
 Create without a README
 Push an existing repository from command line
-  echo "# name" >> README.md
   git init
-  git add README.md
+  git add -A
   git commit -m "first commit"
   git remote add origin https://github.com/Nick-Sullivan/testrepository.git
-  git push -u origin master
-To add any other branches
-  git push origin mytestbranch
-# Create pull request, merge, then delete branch
-Do it on GitHub.com
+  git push origin master
 
 #####################
 # Creating a local repository from a GitHub repo
@@ -60,7 +50,6 @@ Choose branch
 Get files from the cloud
   git pull
 
-
 #####################
 # Everyday operations
 Update the local copy of the cloud (does not change our files)
@@ -69,19 +58,19 @@ Display list of branches
   git branch
 Change into desired branch (changes local files to the local branch)
   git checkout mybranchname
-Download branch contents from the cloud (changes local files to cloud branch)
+Download branch contents from the cloud (changes local files to match cloud)
   git pull
 Make changes to files
 Check all files are tracked
   git status
-Add all files
-  git add -A
+Add all changed files
+  git add -u
 Check changes
   git status
 Commit changes
   git commit -m "message"
 Push changes to cloud
-  git push origin mybranchname
+  git push origin branchname
 Possibly pull request, merge, delete repositories
   (do it online in GitHub.com)
 Update the local copy of the cloud 
@@ -99,4 +88,4 @@ Checkout to a previous state (can't commit changes)
   git checkout unique_id
 Remove git tracking from a folder
   rm -rf .git
-  
+
