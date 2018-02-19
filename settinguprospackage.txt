@@ -1,0 +1,42 @@
+# Note, for all git repositories make sure the URL ends with '.git'
+
+# Run the following once.
+http://wiki.ros.org/bloom/Tutorials/FullGuideToFirstTimeRelease
+- Create a new workspace and put the package in it.
+- catkin_make -DCMAKE_BUILD_TYPE=RelWithDebInfo -j1
+- catkin_make -DCMAKE_BUILD_TYPE=Debug run_tests
+- If all passed, push to git repository
+
+http://wiki.ros.org/bloom/Tutorials/PrereleaseTest
+- Install prerelease stuff
+- sudo apt-get install docker-ce
+- Create a command to run the prerelease (http://prerelease.ros.org/)
+- Run the generated command
+- Make changes until all tests pass
+- sudo apt-get purge docker-ce
+- rm -rf /var/lib/docker/
+
+# Run this to update each version.
+http://wiki.ros.org/bloom/Tutorials/FirstTimeRelease
+- Go into the repository (multi_jackal)
+- catkin_generate_changelog  (if the first time, add --all)
+- Look at the CHANGELOG.rst, edit as necessary to make pretty
+- Commit changes to git (and push)
+- catkin_prepare_release
+- (first time only) Create a 'package_name-release' github, with a README
+- (first time only, following instructions on website, from 4 to 4.2) 
+  - add documentation and source (https://github.com/NicksSimulationsROS/sync_params.git)
+- (not-first time only) bloom-release --rosdistro kinetic --track kinetic multi_jackal
+
+# Once merge is committed, make the wiki page
+http://wiki.ros.org/PackageDocumentation
+
+
+
+# Other stuff
+Running on shadow repo:
+http://wiki.ros.org/ShadowRepository
+
+Code API
+wiki.ros.org/PackageDocumentation
+
